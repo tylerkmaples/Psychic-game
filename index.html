@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pychic Game</title>
+</head>
+<body>
+    <!-- Pseudocode -->
+    <!--1st: computer picks random letter  -->
+    <!-- 2nd: user choooses random letter -->
+    <!-- 3rd: if correct letter is chosen, change the win count and reset the game -->
+    <!-- 4th: if incorrect letter is chosen, add that letter to the list of incorrect letters chosen and display how many guesses they have left -->
+    <!-- 5th: repeat step 4 until correct letter is chosen -->
+    <!-- 6th: if step 4 is repeated and user does not guess correctly, reset the game and add to the losses category -->
+    <!-- 7th: if have time, display to the user which letter was the correct letter (if they guessed and if they didnt guess correctly) -->
+
+    <h1>The Psychic Game</h1>
+
+    <p>Guess what letter I'm thinking of</p>
+
+    <p>Wins:
+        <span id="wins">0</span>
+    </p>
+
+    <p>Losses:
+        <span id="losses">0</span>
+    </p>
+
+    <p>Guesses Left:
+        <span id="guessesleft">9</span>
+    </p>
+
+    <p>Your Guesses So Far:
+        <span id="wrongguesses"></span>
+    </p>
+
+
+
+
+
+    <script src="./assets/javascript/game.js"></script>
+</body>
+</html>

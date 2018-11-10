@@ -16,28 +16,19 @@ var cpuChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m
 //     cpuChoices[randomGuess];
     
 // }
-    // var randomChar = Math.floor(Math.random() * cpuChoices.length);
-    // var aiGuess = cpuChoices[randomChar];
-    // console.log(aiGuess);
+    var randomChar = Math.floor(Math.random() * cpuChoices.length);
+    var aiGuess = cpuChoices[randomChar];
+    console.log(aiGuess);
 
 // reset the game when win/lose
 
 var startGuess = function() {
     wrongGuess = [];
     guesses = 9;
-    var randomChar = Math.floor(Math.random() * cpuChoices.length);
-    var aiGuess = cpuChoices[randomChar];
+    randomChar = Math.floor(Math.random() * cpuChoices.length);
+    aiGuess = cpuChoices[randomChar];
     console.log(aiGuess);
-    return(aiGuess);
 }
-
-startGuess();
-
-function getVariable(){
-    return(startGuess);
-}
-
-var aiGuess = getVariable();
 
 // startGuess();
 
@@ -45,6 +36,8 @@ var aiGuess = getVariable();
 
 document.onkeyup = function (e) {
     var userInput = e.key;
+    console.log(userInput);
+    console.log(aiGuess);
     alert("you entered " + userInput);
 
     // win game

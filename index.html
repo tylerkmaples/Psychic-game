@@ -1,45 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Pychic Game</title>
 </head>
+
 <body>
-    <!-- Pseudocode -->
-    <!--1st: computer picks random letter  -->
-    <!-- 2nd: user choooses random letter -->
-    <!-- 3rd: if correct letter is chosen, change the win count and reset the game -->
-    <!-- 4th: if incorrect letter is chosen, add that letter to the list of incorrect letters chosen and display how many guesses they have left -->
-    <!-- 5th: repeat step 4 until correct letter is chosen -->
-    <!-- 6th: if step 4 is repeated and user does not guess correctly, reset the game and add to the losses category -->
-    <!-- 7th: if have time, display to the user which letter was the correct letter (if they guessed and if they didnt guess correctly) -->
 
-    <h1>The Psychic Game</h1>
+    <div class="jumbotron jumbtron-custom">
+        <h1 class="display-4">The Psychic Game!</h1>
+        <p>Guess what letter I'm thinking of.</p>
 
-    <p>Guess what letter I'm thinking of</p>
+    </div>
+<!-- make row then collumn then jumbotron in each collumn. -->
+    <div class="row">
+        
+        <div class = "jumbotron col-md-4">
+            <p>Wins:
+                <div class="row">
+                    <div class="col-md-12">
+                        <span id="wins">0</span>
+                    </div>
+                </div>
+            </p>
+        </div>
 
-    <p>Wins:
-        <span id="wins">0</span>
-    </p>
+        <div class = "jumbotron col-md-4">
+            <p>Losses:
+                <div class="row">
+                    <div class="col-md-12">
+                        <span id="losses">0</span>
+                    </div>
+                </div>
+            </p>
+        </div>
 
-    <p>Losses:
-        <span id="losses">0</span>
-    </p>
-
-    <p>Guesses Left:
-        <span id="guessesleft">9</span>
-    </p>
-
-    <p>Your Guesses So Far:
-        <span id="wrongguesses"></span>
-    </p>
-
-
-
-
+        <div class = "jumbotron col-md-4">
+            <p>Guesses Left:
+                <div class="row">
+                    <div class="col-md-12">
+                        <span id="guessesleft">9</span>
+                    </div>
+                </div>
+            </p>
+        </div>
+    <div class="row">
+        <div class="jumbotron col-md-12">
+            <p>Your Guesses So Far:
+                <div class="row">
+                    <div class="col-md-12">
+                        <span id="wrongguesses"></span>
+                    </div>
+                </div>
+            </p>
+        </div>
+    </div>
+       
 
     <script src="./assets/javascript/game.js"></script>
 </body>
+
 </html>

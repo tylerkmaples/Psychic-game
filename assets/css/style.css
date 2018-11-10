@@ -1,0 +1,13 @@
+.row {
+    width: 100%;
+    text-align: center;
+}
+
+#span {
+    text-align: center;
+}
+
+.col-md-12 {
+    text-align: center;
+    padding: 0;
+}

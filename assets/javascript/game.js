@@ -10,18 +10,13 @@ var guesses = 9;
 var wrongGuess = [];
 var cpuChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
-// Get computer's randomly generated letter: (should this be a function which i then invoke when win/loss happens?)
-// var aiGuess = function () {
-//     var randomGuess = Math.floor(Math.random() * cpuChoices.length);
-//     cpuChoices[randomGuess];
-    
-// }
-    var randomChar = Math.floor(Math.random() * cpuChoices.length);
-    var aiGuess = cpuChoices[randomChar];
-    console.log(aiGuess);
+// ai guess
+var randomChar = Math.floor(Math.random() * cpuChoices.length);
+var aiGuess = cpuChoices[randomChar];
+console.log(aiGuess);
+
 
 // reset the game when win/lose
-
 var startGuess = function() {
     wrongGuess = [];
     guesses = 9;
@@ -30,43 +25,52 @@ var startGuess = function() {
     console.log(aiGuess);
 }
 
-// startGuess();
-
 // get user guess
-
 document.onkeyup = function (e) {
     var userInput = e.key;
     console.log(userInput);
     console.log(aiGuess);
     alert("you entered " + userInput);
 
-    // win game
-    if (aiGuess === userInput){
-        alert(userInput   +  " is correct. You win!");
-        wins++;
-        startGuess();
-        
-        
+    var isInvalid = function () {
+        return cpuChoices.indexOf(userInput) === -1
     }
-    // guess incorrectly
-    else if (aiGuess !== userInput && wrongGuess.indexOf(userInput) > -1){
-        alert("You already guessed that! Please try another letter.");
+    
+    if(!isInvalid()) {
+    
+        // Guess correctly
+        if (aiGuess === userInput){
+            alert(userInput   +  " is correct. You win!");
+            wins++;
+            startGuess();
+        }
 
-    }
+        // guess incorrectly
+        else if (aiGuess !== userInput && wrongGuess.indexOf(userInput) > -1){
+            alert("You already guessed that! Please try another letter.");
 
-    else if (aiGuess !== userInput && wrongGuess.indexOf(userInput) < 0 && guesses > 1){                         
-        alert(userInput + " is incorrect. Please try again.");
-        guesses--;
-        wrongGuess.push(userInput);
-        console.log(wrongGuess);
+        }
+
+        else if (aiGuess !== userInput && wrongGuess.indexOf(userInput) < 0 && guesses > 1){                         
+            alert(userInput + " is incorrect. Please try again.");
+            guesses--;
+            wrongGuess.push(userInput);
+            console.log(wrongGuess);
         
-    }
+        }
 
+        else {
+            alert(userInput + " is incorrect. Game Over!");
+            losses++;
+            startGuess();
+        }
+    
+    }
+    
     else {
-        alert(userInput + " is incorrect. Game Over!");
-        losses++;
-        startGuess();
+        alert("Invalid key! Please choose an alphabetical letter.")
     }
+    
 
     winsElem.textContent = wins;
     lossesElem.textContent = losses;

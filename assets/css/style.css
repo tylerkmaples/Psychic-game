@@ -1,3 +1,12 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.jumbtron-custom {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
 .row {
     width: 100%;
     text-align: center;
@@ -7,7 +16,19 @@
     text-align: center;
 }
 
+.col-md-3 {
+    margin: 20px auto;
+}
 .col-md-12 {
     text-align: center;
-    padding: 0;
+    padding: 10px;
+}
+
+.rowguess {
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+#wrongguesses {
+    letter-spacing: 5px;
 }

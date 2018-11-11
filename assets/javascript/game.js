@@ -27,7 +27,7 @@ var startGuess = function() {
 
 // get user guess
 document.onkeyup = function (e) {
-    var userInput = e.key;
+    var userInput = e.key.toLowerCase();
     console.log(userInput);
     console.log(aiGuess);
     alert("you entered " + userInput);

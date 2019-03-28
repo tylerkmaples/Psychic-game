@@ -1,5 +1,6 @@
 # Psychic-game
 
-![gif of Game](./assets/images/psychGame.gif)
-
+<div style="text-align: center">
+    ![gif of Game](./assets/images/psychGame2.gif)
+</div>
 
